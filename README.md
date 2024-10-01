@@ -13,25 +13,25 @@
     <strong>Healthy Meal Creator</strong><br>
     Description: THis program will help you put together a healthy meal while also informing you with the total macros per meal.<br>
     Concepts Learned: <em>Nutrition Calculation, Customization and personalization</em><br>
-    <a href="meal_creator.py">Link to the project directory</a>
+    <a href="meal_creator.py">Meal Creator</a>
   </li>
   <li>
     <strong>Password Manager</strong><br>
     Description: This simple program can Generate, Save and Retrieve passwords.<br>
     Concepts Learned: <em>Encryption & Decryption, File Handling, Password Generation </em><br>
-    <a href="Password manager.py">Link to the project directory</a>
+    <a href="Password manager.py">Password Manager</a>
   </li>
    <li>
     <strong>Calculator</strong><br>
     Description: Simple arithmetic calculator.<br>
     Concepts Learned: <em>Adding, Subtraction, Multiplication, Division</em><br>
-    <a href="Calculator.py">Link to the project directory</a>
+    <a href="Calculator.py">Calculator</a>
   </li>
    <li>
     <strong>Season Finder</strong><br>
     Description: This program helps you learn and dertermine the seasons that the months falls in.<br>
     Concepts Learned: <em>Season changing </em><br>
-    <a href="Season finder.py">Link to the project directory</a>
+    <a href="Season finder.py">Season Finder</a>
   </li>
 </ul>
 
