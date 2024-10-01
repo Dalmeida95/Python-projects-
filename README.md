@@ -10,16 +10,28 @@
 
 <ul>
   <li>
-    <strong>Project Name</strong><br>
-    Description: Brief explanation of the project.<br>
-    Concepts Learned: <em>Key concepts/skills demonstrated</em><br>
-    <a href="link-to-project-directory">Link to the project directory</a>
+    <strong>Healthy Meal Creator</strong><br>
+    Description: THis program will help you put together a healthy meal while also informing you with the total macros per meal.<br>
+    Concepts Learned: <em>Nutrition Calculation, Customization and personalization</em><br>
+    <a href="meal_creator.py">Link to the project directory</a>
   </li>
   <li>
-    <strong>Project Name</strong><br>
-    Description: Brief explanation of the project.<br>
-    Concepts Learned: <em>Key concepts/skills demonstrated</em><br>
-    <a href="link-to-project-directory">Link to the project directory</a>
+    <strong>Password Manager</strong><br>
+    Description: This simple program can Generate, Save and Retrieve passwords.<br>
+    Concepts Learned: <em>Encryption & Decryption, File Handling, Password Generation </em><br>
+    <a href="Password manager.py">Link to the project directory</a>
+  </li>
+   <li>
+    <strong>Calculator</strong><br>
+    Description: Simple arithmetic calculator.<br>
+    Concepts Learned: <em>Adding, Subtraction, Multiplication, Division</em><br>
+    <a href="Calculator.py">Link to the project directory</a>
+  </li>
+   <li>
+    <strong>Season Finder</strong><br>
+    Description: This program helps you learn and dertermine the seasons that the months falls in.<br>
+    Concepts Learned: <em>Season changing </em><br>
+    <a href="Season finder.py">Link to the project directory</a>
   </li>
 </ul>
 
@@ -27,9 +39,8 @@
 
 <p>Throughout these projects, I have worked with:</p>
 <ul>
-  <li>Python (Core concepts, Object-Oriented Programming, etc.)</li>
+  <li>Python </li>
   <li>Version Control: Git</li>
-  <li>Web Development (HTML, CSS, Flask, etc.)</li>
 </ul>
 
 <h2>Getting Started</h2>
