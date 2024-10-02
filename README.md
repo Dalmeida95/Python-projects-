@@ -29,7 +29,7 @@
   </li>
    <li>
     <strong>Season Finder</strong><br>
-    Description: This program helps you learn and dertermine the seasons that the months falls in.<br>
+    Description: This program helps you learn and dertermine the seasons that the months fall in.<br>
     Concepts Learned: <em>Season changing </em><br>
     <a href="Season finder.py">Season Finder</a>
   </li>
