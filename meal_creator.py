@@ -4,32 +4,42 @@ from tkinter import messagebox
 
 def get_meal_type():
     meal_type = meal_type_var.get().strip().lower()
+    if meal_type not in meals:
+        return None
     return meal_type
 
 def create_meal(meal_combinations):
     meal_choice = random.choice(meal_combinations)
     return meal_choice
 
+def calculate_meal_macros(meal):
+    protein_macros = meal['protein_macros']
+    carb_macros = meal['carb_macros']
+    fat_macros = meal['fat_macros']
+    return protein_macros, carb_macros, fat_macros
+
 def show_meal():
     meal_type = get_meal_type()
     
-    if meal_type in meals:
-        meal_combinations = meals[meal_type]
-        meal = create_meal(meal_combinations)
+    if meal_type is None:
+        messagebox.showerror("Error, please select a valid meal type ('breakfast', lunch', 'dinner').")
+        return
         
-        protein = meal['protein']
-        carb = meal['carb']
-        fat = meal['fat']
+    meal_combinations = meals[meal_type]
+    meal = create_meal(meal_combinations)
         
-        total_protein = sum(m['protein_macros'] for m in meal_combinations)
-        total_carb = sum(m['carb_macros'] for m in meal_combinations)
-        total_fat = sum(m['fat_macros'] for m in meal_combinations)
+    protein = meal['protein_macros']
+    carb = meal['carb_macros']
+    fat = meal['fat_macros']
         
-        messagebox.showinfo("Meal Suggestion", f"Your {meal_type} to prepare consists of:\n\n"
-                                               f"Protein: {protein}\nCarb: {carb}\nFat: {fat}\n\n"
-                                               f"Total Macros:\nProtein: {total_protein}g\nCarb: {total_carb}g\nFat: {total_fat}g")
-    else:
-        messagebox.showerror("Error", "Invalid meal type entered. Please select 'breakfast', 'lunch', or 'dinner'.")
+    messagebox.showinfo("Meal Suggestion", f"Your {meal_type} consists of:\n\n"
+                                            f"Protein: {protein}\nCarb: {carb}\nFat: {fat}\n\n"
+                                            f"Total Macros:\nProtein: {protein_macros}g\nCarb: {carb_macros}g\nFat: {fat_macros}g")
+
+
+    
+        
+        
 
 meals = {
     'breakfast': [
@@ -59,7 +69,7 @@ root = tk.Tk()
 root.title("Meal Suggestion App")
 
 # Meal type variable
-meal_type_var = tk.StringVar()
+meal_type_var = tk.StringVar(value='select meal type') # set default value
 
 # Label and dropdown for meal type selection
 tk.Label(root, text="Select the meal type:").pack(pady=10)
