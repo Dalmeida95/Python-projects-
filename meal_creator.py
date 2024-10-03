@@ -22,24 +22,22 @@ def show_meal():
     meal_type = get_meal_type()
     
     if meal_type is None:
-        messagebox.showerror("Error, please select a valid meal type ('breakfast', lunch', 'dinner').")
+        messagebox.showerror("Error", "Please select a valid meal type ('breakfast', 'lunch', 'dinner').")
         return
         
     meal_combinations = meals[meal_type]
     meal = create_meal(meal_combinations)
         
-    protein = meal['protein_macros']
-    carb = meal['carb_macros']
-    fat = meal['fat_macros']
+    protein = meal['protein']
+    carb = meal['carb']
+    fat = meal['fat']
+    
+    # Retrieve the macro values using the calculate_meal_macros function
+    protein_macros, carb_macros, fat_macros = calculate_meal_macros(meal)
         
     messagebox.showinfo("Meal Suggestion", f"Your {meal_type} consists of:\n\n"
                                             f"Protein: {protein}\nCarb: {carb}\nFat: {fat}\n\n"
                                             f"Total Macros:\nProtein: {protein_macros}g\nCarb: {carb_macros}g\nFat: {fat_macros}g")
-
-
-    
-        
-        
 
 meals = {
     'breakfast': [
@@ -69,7 +67,7 @@ root = tk.Tk()
 root.title("Meal Suggestion App")
 
 # Meal type variable
-meal_type_var = tk.StringVar(value='select meal type') # set default value
+meal_type_var = tk.StringVar(value='select meal type')  # set default value
 
 # Label and dropdown for meal type selection
 tk.Label(root, text="Select the meal type:").pack(pady=10)
